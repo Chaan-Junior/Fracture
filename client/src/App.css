@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  align-items: center;
+  color: #00334e;
+}
+
+.sec1-div1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
