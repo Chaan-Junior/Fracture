@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import jsPDF from "jspdf";
-import "jspdf-autotable"; // Import the autotable plugin
+import "jspdf-autotable";
 import "../styles/ProductDisplay.css";
 import { Link } from "react-router-dom";
 
@@ -38,7 +38,6 @@ function ProductDisplay() {
   };
 
   const handleNotifySupplier = (id) => {
-    // Add logic to notify the supplier here
     alert(`Notifying supplier for product with ID ${id}`);
   };
 
@@ -72,7 +71,6 @@ function ProductDisplay() {
     doc.save("Product_Report.pdf");
   };
 
-  // Function to filter products based on the search term
   const filteredProducts = products.filter((product) =>
     product.productName.toLowerCase().includes(searchTerm.toLowerCase())
   );

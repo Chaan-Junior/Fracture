@@ -1,5 +1,3 @@
-/* ProductDisplay.css */
-
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: #f2f2f2;
@@ -8,13 +6,13 @@ body {
 }
 
 .container {
-  max-width: 1200px; /* Adjust the width as needed */
-  margin: 20px auto; /* Centered with margin on top and bottom */
+  max-width: 1200px;
+  margin: 20px auto;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  overflow-x: auto; /* Enable horizontal scrolling if the table is too wide */
+  overflow-x: auto;
 }
 
 h1 {
@@ -22,7 +20,6 @@ h1 {
   color: #333;
 }
 
-/* Search input styling */
 input[type="text"] {
   width: 100%;
   padding: 10px;
@@ -35,14 +32,14 @@ input[type="text"] {
 .product-table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #ccc; /* Add a border around the table */
+  border: 1px solid #ccc;
 }
 
 .product-table th,
 .product-table td {
   padding: 12px;
-  text-align: center; /* Center-align the column headers */
-  border-bottom: 2px solid #ccc; /* Thicker dividing lines */
+  text-align: center;
+  border-bottom: 2px solid #ccc;
   height: 90px;
 }
 
@@ -58,8 +55,8 @@ input[type="text"] {
 
 .product-actions {
   display: flex;
-  align-items: center; /* Vertically center the buttons */
-  justify-content: center; /* Horizontally center the buttons */
+  align-items: center;
+  justify-content: center;
 }
 
 .action-buttons {
@@ -72,7 +69,7 @@ input[type="text"] {
 .notify-supplier,
 .add-product {
   padding: 8px 16px;
-  margin: 0 4px; /* Add some spacing between buttons */
+  margin: 0 4px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
@@ -97,7 +94,7 @@ input[type="text"] {
 }
 
 .notify-supplier {
-  background-color: #ffdb58; /* Yellow */
+  background-color: #ffdb58;
   color: #333;
 }
 
@@ -125,14 +122,14 @@ input[type="text"] {
 
 .generate-pdf {
   padding: 10px 16px;
-  margin: 0 4px; /* Add some spacing between buttons */
+  margin: 0 4px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   font-size: 14px;
   border-radius: 4px;
-  background-color: #ffcc00; /* Dark yellow background color */
-  color: #333; /* Text color */
+  background-color: #ffcc00;
+  color: #333;
 }
 
 .generate-pdf:hover {
