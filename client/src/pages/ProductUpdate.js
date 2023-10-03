@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import Navigation from "../components/Navbar";
 import "../styles/ProductUpdate.css";
 
 function ProductUpdate() {
@@ -120,7 +119,6 @@ function ProductUpdate() {
 
   return (
     <div>
-      <Navigation />
       <div className="update-container">
         <h1>Update Product Details</h1>
         <div className="product-update-form">

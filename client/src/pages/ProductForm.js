@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
-import Navigation from "../components/Navbar";
 import "../App.css";
 import "../styles/ProductForm.css";
+import { Link } from "react-router-dom";
 
 const ProductForm = () => {
   const [productName, setProductName] = useState("");
@@ -85,6 +85,7 @@ const ProductForm = () => {
         })
         .then((response) => {
           alert("Successfully Created");
+          window.location.reload();
         })
         .catch((error) => {
           console.error(error);
@@ -97,9 +98,10 @@ const ProductForm = () => {
 
   return (
     <div>
-      {" "}
-      <Navigation />
       <h1 className="product-form-title">Add Product</h1>
+      <Link className="back" to="/">
+        Back to Products
+      </Link>
       <div className="product-form">
         <div className="image-container">
           <img

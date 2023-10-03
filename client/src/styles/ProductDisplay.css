@@ -1,102 +1,119 @@
-.product-display {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+/* ProductDisplay.css */
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
 }
 
-.product-card {
-  width: calc(20% - 20px);
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #145374;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.container {
+  max-width: 1200px; /* Adjust the width as needed */
+  margin: 20px auto; /* Centered with margin on top and bottom */
+  padding: 20px;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transform-origin: center bottom;
-  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow-x: auto; /* Enable horizontal scrolling if the table is too wide */
 }
 
-.product-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+h1 {
+  text-align: center;
+  color: #333;
 }
 
-.product-image-container {
-  overflow: hidden;
-  border-radius: 5px;
-  flex: 1;
-  backface-visibility: hidden;
-}
-
-.product-image {
+/* Search input styling */
+input[type="text"] {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-  backface-visibility: hidden;
-  will-change: transform;
-}
-
-.product-card:hover .product-image {
-  transform: scale(1.1);
-}
-
-.product-details {
   padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
-.product-name,
-.product-price {
-  font-size: 1.2em;
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc; /* Add a border around the table */
+}
+
+.product-table th,
+.product-table td {
+  padding: 12px;
+  text-align: center; /* Center-align the column headers */
+  border-bottom: 2px solid #ccc; /* Thicker dividing lines */
+  height: 90px;
+}
+
+.product-table th {
+  background-color: #00334e;
+  color: #fff;
   font-weight: bold;
 }
 
-.product-description,
-.product-type {
-  display: none;
+.product-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-.product-card:hover .product-description,
-.product-card:hover .product-type {
-  display: block;
-  font-size: 0.8em;
-}
-
-.product-buttons {
+.product-actions {
   display: flex;
-  justify-content: space-between;
+  align-items: center; /* Vertically center the buttons */
+  justify-content: center; /* Horizontally center the buttons */
+}
+
+.action-buttons {
+  display: flex;
   align-items: center;
-  padding: 10px;
-  background-color: #f0f0f0;
 }
 
 .update-product,
-.delete-product {
-  display: inline-block;
-  padding: 4px 10px;
-  color: #fff;
-  background-color: #28a745;
+.delete-product,
+.notify-supplier,
+.add-product {
+  padding: 8px 16px;
+  margin: 0 4px; /* Add some spacing between buttons */
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.update-product {
+  background-color: #4caf50;
+  color: #fff;
 }
 
 .delete-product {
-  background-color: #dc3545;
+  background-color: #f44336;
+  color: #fff;
 }
 
-.update-product:hover {
-  background-color: #005a32;
+.add-product {
+  background-color: #5588a3;
+  color: #e8e8e8;
+  padding: 12px 20px;
+}
+
+.notify-supplier {
+  background-color: #ffdb58; /* Yellow */
+  color: #333;
+}
+
+.update-product:hover,
+.delete-product:hover,
+.notify-supplier:hover,
+.add-product:hover {
+  opacity: 0.85;
 }
 
 .delete-product:hover {
-  background-color: #a30b0b;
+  background-color: #d32f2f;
+}
+
+.add-product:hover {
+  background-color: #0e3a57;
 }
 
 #heading {
@@ -104,4 +121,20 @@
   font-size: 2em;
   font-weight: bold;
   margin: 10px;
+}
+
+.generate-pdf {
+  padding: 10px 16px;
+  margin: 0 4px; /* Add some spacing between buttons */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: #ffcc00; /* Dark yellow background color */
+  color: #333; /* Text color */
+}
+
+.generate-pdf:hover {
+  opacity: 0.9;
 }
